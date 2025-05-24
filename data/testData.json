@@ -5,12 +5,35 @@
   "UserName" : "Sara Ramadan",
   "EmailOrPasswordIsIncorrectMSG" : "Your email or password is incorrect!",
   "SubscriptionEmail" : "test@test.com",
+  "Prices":
+  {
+    "FirstProductPrice" : "Rs. 500",
+    "SecondProductPrice" : "Rs. 400",
+    "TotalPrice": "Rs. 900"
+  },
+  "Quantities":
+  {
+    "FirstProductQuantity" : "1",
+    "SecondProductQuantity" : "1"
+  },
+
+  "Quantity": {
+    "TheFirstProductQuantity": "4"
+  },
+
+"ExpectedResults" : {
+  "ShoppingCartAssertion" : "Shopping Cart",
+  "ProductDetailAssertion" : "CATEGORY",
+  "HomePageAssertion" : "FEATURES ITEMS"
+
+  },
 
   "Login":{
     "ValidCreditials": {
       "Email": "sararamadan20005@gmail.com",
       "Password": "Mo7@medramadan"
     },
+
     "InvalidCreditials": {
       "InvalidUsername": {
         "Email": "",
@@ -42,5 +65,12 @@
       "Day":"19",
       "Month":"4",
       "Year":"2000"
-    }
+    },
+  "Contactus":{
+    "Name": "zahraa",
+    "Email": "zee2@test.test",
+    "Subject": "test",
+    "Message": "Test Message",
+    "FilePath": "C:\\Users\\Samsung\\Desktop\\download (1).png"
+}
   }
