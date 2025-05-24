@@ -8,9 +8,11 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
+import utils.MethodHandles;
 import utils.ScreenRecorderUtil;
 import utils.UtilsTests;
 
+import java.lang.invoke.MethodHandle;
 import java.lang.reflect.Method;
 
 import static reader.ReadDataFromJson.dataModel;
@@ -85,4 +87,11 @@ public class BaseTests {
         utilsTests.flushReport();
     }
 
+
+    @Test
+    public void ClickTester() {
+
+        HomePage home = new HomePage(driver);
+        home.assertTestCasesExists();
+    }
 }
