@@ -12,9 +12,14 @@ public class HomePage extends MethodHandles {
     }
 
 
-
     By TestCaseButton =By.xpath("//*[contains(text(),'Test Cases')]");
     By TestCaseTitle = By.xpath("//*[contains(text(),'Below is the list of test Cases for you to practice the Automation. Click on the scenario for detailed Test Steps:')]");
+    By SubscriptionTitle = By.xpath("//*[contains(text(),'Subscription')]");
+    By SubscriptionEmail = By.id("susbscribe_email");
+    By SubmitButton = By.id("subscribe");
+    By successMessage = By.xpath("//*[contains(text(),'You have been successfully subscribed!')]");
+
+
 
     public void assertTestCasesExists() {
         myAssertEquals(getText(TestCaseButton, 2), "Test Cases");
@@ -22,9 +27,23 @@ public class HomePage extends MethodHandles {
         myAssertEquals(getText(TestCaseTitle, 2), "Below is the list of test Cases for you to practice the Automation. Click on the scenario for detailed Test Steps:");
     }
 
+    public   void homepageopened (){
+        myAssertEquals(getText(TestCaseButton, 2), "Test Cases");
+    }
 
-
-
+    public void scrollToFooter() {
+        scrollToElement(SubscriptionTitle);
+    }
+    public String getSubscriptionTitle() {
+        return getText(SubscriptionTitle, 5);
+    }
+    public void enterEmailAndSubscribe(String email) {
+        sendKeys(SubscriptionEmail, 5, email);
+        click(SubmitButton, 5);
+    }
+    public boolean isSuccessMessageDisplayed() {
+        return isDisplayed(successMessage, 5);
+    }
     //locators
     private final By signupAndLoginLink=By.linkText("Signup / Login");
     private final By signUpAndLogin = By.linkText("Signup / Login");
@@ -106,7 +125,17 @@ public class HomePage extends MethodHandles {
     {
         click(products,5);
         return new ProductsPage(driver);
-
+        //Pleas fix the return issue
+        //return driver.findElement(homePageAssertion).getText();
     }
+
+    public void verifySubscriptionSection(String email) {
+        this.homepageopened();
+        this.scrollToFooter();
+        this.getSubscriptionTitle();
+        this.enterEmailAndSubscribe(email);
+        this.isSuccessMessageDisplayed();
+    }
+
 }
 

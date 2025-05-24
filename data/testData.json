@@ -4,6 +4,7 @@
   "HomeColor": "rgba(255, 165, 0, 1)",
   "UserName" : "Sara Ramadan",
   "EmailOrPasswordIsIncorrectMSG" : "Your email or password is incorrect!",
+  "SubscriptionEmail" : "test@test.com",
   "Prices":
   {
     "FirstProductPrice" : "Rs. 500",
