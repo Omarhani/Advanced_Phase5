@@ -95,7 +95,15 @@ public class HomePage extends MethodHandles {
 
     public String getHomePageMsg() {
         return driver.findElement(homePageAssertion).getText();
-
     }
+
+    public void verifySubscriptionSection(String email) {
+        this.homepageopened();
+        this.scrollToFooter();
+        this.getSubscriptionTitle();
+        this.enterEmailAndSubscribe(email);
+        this.isSuccessMessageDisplayed();
+    }
+
 }
 

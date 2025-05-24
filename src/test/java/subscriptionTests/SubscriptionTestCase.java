@@ -12,12 +12,7 @@ public class SubscriptionTestCase extends BaseTests {
     @Test
     public void HomePageOpened() throws FileNotFoundException {
 
-        homePage.homepageopened();
-        homePage.scrollToFooter();
-        homePage.getSubscriptionTitle();
-        homePage.enterEmailAndSubscribe(dataModel().SubscriptionEmail);
-        homePage.isSuccessMessageDisplayed();
-
+        homePage.verifySubscriptionSection(dataModel().SubscriptionEmail);
     }
 }
 
