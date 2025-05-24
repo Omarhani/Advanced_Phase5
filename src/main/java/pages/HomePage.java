@@ -95,12 +95,12 @@ public class HomePage extends MethodHandles {
    // public void scrollDown (){
         //Actions actions=new Actions(driver);
         //actions.sendKeys(Keys.PAGE_DOWN).perform();
-    }
+//    }
 
-    public ContactUsPage clickContactUsLink(){
-        click(contactUsLink,7);
+    public ContactUsPage clickContactUsLink() {
+        click(contactUsLink, 7);
         return new ContactUsPage(driver);
-
+    }
 
     public ProductsPage clickOnProducts()
     {
