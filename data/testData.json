@@ -1,13 +1,38 @@
 {
+
   "URL": "https://automationexercise.com/",
   "HomeColor": "rgba(255, 165, 0, 1)",
   "UserName" : "Sara Ramadan",
   "EmailOrPasswordIsIncorrectMSG" : "Your email or password is incorrect!",
+  "Prices":
+  {
+    "FirstProductPrice" : "Rs. 500",
+    "SecondProductPrice" : "Rs. 400",
+    "TotalPrice": "Rs. 900"
+  },
+  "Quantities":
+  {
+    "FirstProductQuantity" : "1",
+    "SecondProductQuantity" : "1"
+  },
+
+  "Quantity": {
+    "TheFirstProductQuantity": "4"
+  },
+
+"ExpectedResults" : {
+  "ShoppingCartAssertion" : "Shopping Cart",
+  "ProductDetailAssertion" : "CATEGORY",
+  "HomePageAssertion" : "FEATURES ITEMS"
+
+  },
+
   "Login":{
     "ValidCreditials": {
       "Email": "sararamadan20005@gmail.com",
       "Password": "Mo7@medramadan"
     },
+
     "InvalidCreditials": {
       "InvalidUsername": {
         "Email": "",
@@ -18,5 +43,33 @@
         "Password": "Mo7@medr123"
       }
     }
-  }
+  },
+  "Signup": {
+    "SignupValidEmail": {
+      "Name":"zee",
+      "Email":"zee17@test.test"
+    }
+  },
+    "SignupFullData": {
+      "FirstName":"Zahraa",
+      "LastName":"ahmed",
+      "Company":"test",
+      "Address":"Cairo",
+      "Country": "Canada",
+      "State":"EG",
+      "City":"Cairo",
+      "ZipCode":"123456",
+      "MobileNumber":"010623458788",
+      "Password":"123456",
+      "Day":"19",
+      "Month":"4",
+      "Year":"2000"
+    },
+  "Contactus":{
+    "Name": "zahraa",
+    "Email": "zee2@test.test",
+    "Subject": "test",
+    "Message": "Test Message",
+    "FilePath": "C:\\Users\\Samsung\\Desktop\\download (1).png"
 }
+  }

@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class MethodHandles {
 
@@ -378,10 +379,27 @@ public class MethodHandles {
 
         assertEquals(actual, expected);
     }
+    public static void myAssertTrue(boolean condition) {
+        test.info(MarkupHelper.createLabel("----------------- Verification -----------------", ExtentColor.BLUE));
+        test.info(condition ? "Condition PASSED" : "Condition FAILED");
+
+        assertTrue(condition);
+    }
+
 
     private static void addBorderToElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border = '5px solid red';", element);
+    }
+    protected void smoothScrollToElement(By locator) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});",  webElement(locator));
+        setSteps();
+    }
+
+    protected void navigateBack() {
+        driver.navigate().back();
+        setSteps();
     }
 
 }

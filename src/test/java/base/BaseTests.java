@@ -45,9 +45,9 @@ public class BaseTests {
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("headlessChrome")) {
             chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--headless");             // Run Chrome in headless mode (no UI)
             driver = new ChromeDriver(chromeOptions);
-        } else if (browser.equalsIgnoreCase("headlessfirefox")) {
+        } else if (browser.equalsIgnoreCase("headlessFirefox")) {
             firefoxOptions = new FirefoxOptions();
             firefoxOptions.addArguments("--headless");
             driver = new FirefoxDriver(firefoxOptions);
