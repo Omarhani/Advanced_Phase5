@@ -17,6 +17,7 @@ public class DataModel {
 
     public Quantity Quantity ;
     public ExpectedResults ExpectedResults;
+    public ProductDetails ProductDetails;
 
 
     public Signup Signup;

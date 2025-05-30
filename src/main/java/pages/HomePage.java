@@ -98,6 +98,7 @@ public class HomePage extends MethodHandles {
     }
 
     public String getHomePageMsg() {
+        smoothScrollToElement(homePageAssertion);
         return getText(homePageAssertion,5);
 
     }
@@ -111,9 +112,9 @@ public class HomePage extends MethodHandles {
 
     }
 
-   // public void scrollDown (){
-        //Actions actions=new Actions(driver);
-        //actions.sendKeys(Keys.PAGE_DOWN).perform();
+    // public void scrollDown (){
+    //Actions actions=new Actions(driver);
+    //actions.sendKeys(Keys.PAGE_DOWN).perform();
 //    }
 
     public ContactUsPage clickContactUsLink() {
@@ -125,17 +126,14 @@ public class HomePage extends MethodHandles {
     {
         click(products,5);
         return new ProductsPage(driver);
-        //Pleas fix the return issue
-        //return driver.findElement(homePageAssertion).getText();
     }
 
     public void verifySubscriptionSection(String email) {
         this.homepageopened();
-        this.scrollToFooter();
+        smoothScrollToElement(SubscriptionTitle);
         this.getSubscriptionTitle();
         this.enterEmailAndSubscribe(email);
         this.isSuccessMessageDisplayed();
     }
 
 }
-
