@@ -24,8 +24,17 @@
 "ExpectedResults" : {
   "ShoppingCartAssertion" : "Shopping Cart",
   "ProductDetailAssertion" : "CATEGORY",
-  "HomePageAssertion" : "FEATURES ITEMS"
+  "HomePageAssertion" : "FEATURES ITEMS",
+  "ProductPageAssertion": "ALL PRODUCTS"
 
+  },
+  "ProductDetails": {
+    "Name": "Blue Top",
+    "Category" : "Category: Women > Tops",
+    "Price" : "Rs. 500",
+    "Availability" : "In Stock",
+    "Condition" : "New",
+    "Brand" : "Polo"
   },
 
   "Login":{
@@ -71,6 +80,6 @@
     "Email": "zee2@test.test",
     "Subject": "test",
     "Message": "Test Message",
-    "FilePath": "C:\\Users\\Samsung\\Desktop\\download (1).png"
+    "FilePath": "C:\\Users\\sarar\\Downloads\\1.png"
 }
   }

@@ -88,10 +88,5 @@ public class BaseTests {
     }
 
 
-    @Test
-    public void ClickTester() {
 
-        HomePage home = new HomePage(driver);
-        home.assertTestCasesExists();
-    }
 }

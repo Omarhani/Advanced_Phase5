@@ -55,6 +55,7 @@ sendKeys(contactUsUploadFile,5,filePath);
     insertContactUsSubject(subject);
     insertContactUsMessage(message);
     uploadFile(filePath);
+    smoothScrollToElement(contactUsSubmitButton);
     clickOnSubmitButton();
     acceptContactUsAlert();
 
