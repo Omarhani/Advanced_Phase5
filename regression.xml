@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression Test Suite">
+<suite name="regression">
     <test name="Chrome">
         <parameter name="browser" value="chrome"/>
-
+        <classes>
+            <class name="cart.CartTest"></class>
+            <class name="product.ProductTests"></class>
+            <class name="login.LoginTests"></class>
+            <class name="contactUs.ContactUsTests"></class>
+            <class name="subscriptionTests.SubscriptionTestCase"></class>
+        </classes>
     </test>
 </suite>
