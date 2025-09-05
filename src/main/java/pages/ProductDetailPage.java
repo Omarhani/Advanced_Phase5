@@ -17,7 +17,12 @@ public class ProductDetailPage extends MethodHandles {
     private final By quantityTextBox = By.xpath("//input[@id='quantity']");
     private final By addCartButton = By.xpath("//button[@type='button']");
     private final By viewCartLink = By.xpath("//div[@id='cartModal']//u[contains(text() ,'View Cart')]");
-
+    private final By productName = By.xpath("//h2[text()=\"Blue Top\"]");
+    private final By category = By.xpath("//p[text()=\"Category: Women > Tops\"]");
+    private final By price = By.xpath("//span[text()=\"Rs. 500\"]");
+    private final By availability = By.xpath("//*[contains(text(), 'In Stock')]");
+    private final By condition = By.xpath("//*[contains(text(), 'New')]");
+    private final By brand = By.xpath("//*[contains(text(), 'Polo')]");
 
     public String getAssertMessage() {
         return getText(assertOnProductDetail, 30);
@@ -42,9 +47,32 @@ public class ProductDetailPage extends MethodHandles {
         return new ShoppingCartPage(driver);
 
     }
+    public String getProductName() {
+        return getText(productName, 30);
+    }
+
+    public String getCategory() {
+        return getText(category, 30);
+    }
+
+    public String getPrice() {
+        return getText(price, 30);
+    }
+
+    public String getAvailability() {
+        return getText(availability, 30).trim();
+    }
+
+    public String getCondition() {
+        return getText(condition, 30).trim();
+    }
+    public String getBrand() {
+        return getText(brand, 30).trim();
+    }
 
 
-   }
+
+}
 
 
 

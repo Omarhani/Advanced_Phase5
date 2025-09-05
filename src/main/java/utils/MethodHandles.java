@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -408,6 +409,16 @@ public class MethodHandles {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webElement(locator));
         setSteps();
         addBorderToElement(driver, webElement(locator));
+    }
+    public boolean isElementListVisible(By locator, int time) {
+        List<WebElement> elements = driver.findElements(locator);
+        boolean isVisible = !elements.isEmpty() && elements.get(0).isDisplayed();
+        if (isVisible) {
+            explicitWait(time, locator);
+            addBorderToElement(driver, elements.get(0));
+        }
+        setSteps();
+        return isVisible;
     }
 
 
